@@ -5,11 +5,14 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class UserRequest {
+public class AuthorRequest {
 
     private Long id;
     private String name;
-    private String username;
+    private String authorName;
+    private Integer age;
     private String email;
+    private String password;
+    private String role;
 
 }
