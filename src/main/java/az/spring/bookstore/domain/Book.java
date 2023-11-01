@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+@NamedQuery(name = "Book.getAllBooks",
+        query = "select new az.spring.bookstore.wrapper.BookWrapper(b.id,b.name,b.status,b.authorId) " +
+                "from Book b where b.status='TRUE'")
+
 @Entity
 @Setter
 @Getter
@@ -26,7 +30,11 @@ public class Book {
     private Long authorId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
+    @JoinColumn(name = "student_id", nullable = false)
+    private Student student;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id", nullable = false)
+    private Author author;
 
 }
