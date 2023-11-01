@@ -18,3 +18,6 @@ spring:
         persistence:
           sharedCache:
             mode: ENABLE_SELECTIVE
+encryption:
+  salt:
+    rounds: 10
