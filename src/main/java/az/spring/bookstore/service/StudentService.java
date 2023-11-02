@@ -1,22 +1,17 @@
 package az.spring.bookstore.service;
 
-import az.spring.bookstore.domain.Author;
 import az.spring.bookstore.domain.Student;
 import az.spring.bookstore.enums.Role;
-import az.spring.bookstore.exception.AuthorNotFoundException;
-import az.spring.bookstore.exception.IncorrectPasswordException;
-import az.spring.bookstore.exception.StudentNotFoundException;
-import az.spring.bookstore.exception.UserNotFoundException;
+import az.spring.bookstore.exception.*;
 import az.spring.bookstore.exception.error.ErrorMessage;
 import az.spring.bookstore.mapper.StudentMapper;
 import az.spring.bookstore.repository.StudentRepository;
-import az.spring.bookstore.request.AuthorRequest;
 import az.spring.bookstore.request.ChangePasswordRequest;
 import az.spring.bookstore.request.LoginRequest;
 import az.spring.bookstore.request.StudentRequest;
-import az.spring.bookstore.response.AuthorResponse;
 import az.spring.bookstore.response.StudentResponse;
 import az.spring.bookstore.security.JwtUtil;
+import az.spring.bookstore.wrapper.BookWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -24,8 +19,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 import static az.spring.bookstore.constans.BookStore.*;
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
@@ -100,6 +95,10 @@ public class StudentService {
                     .body(studentMapper.fromModelToResponse(studentRepository.save(updatedStudent)));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
+    public ResponseEntity<List<BookWrapper>> getAllBooksByStudentId(Long studentId) {
+        return ResponseEntity.status(HttpStatus.OK).body(studentRepository.getAllBooksStudentId(studentId));
     }
 
     private boolean validationSignUp(StudentRequest studentRequest) {
