@@ -45,4 +45,16 @@ public class BookController {
         bookService.deleteBookById(bookId, authorId);
     }
 
+    @PostMapping("/{studentId}/add-specificBook/{bookId}")
+    public ResponseEntity<BookResponse> addSpecificBookByStudent(@PathVariable(name = "studentId") Long studentId,
+                                                                 @PathVariable(name = "bookId") Long bookId) {
+        return bookService.addSpecificBookByStudent(studentId, bookId);
+    }
+
+    @PostMapping("/{studentId}/return-book/{bookId}")
+    public ResponseEntity<BookResponse> returnBookByStudent(@PathVariable(name = "studentId") Long studentId,
+                                                            @PathVariable(name = "bookId") Long bookId) {
+        return bookService.returnBookByStudent(studentId, bookId);
+    }
+
 }
