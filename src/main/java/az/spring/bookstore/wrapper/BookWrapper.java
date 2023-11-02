@@ -16,5 +16,13 @@ public class BookWrapper {
     private String name;
     private BookStatus status;
     private Long authorId;
+    private Long studentId;
+
+    public BookWrapper(Long id, String name, BookStatus status, Long authorId) {
+        this.id = id;
+        this.name = name;
+        this.status = status;
+        this.authorId = authorId;
+    }
 
 }

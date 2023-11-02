@@ -6,8 +6,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 @NamedQuery(name = "Book.getAllBooks",
-        query = "select new az.spring.bookstore.wrapper.BookWrapper(b.id,b.name,b.status,b.authorId) " +
+        query = "select new az.spring.bookstore.wrapper.BookWrapper(b.id,b.name,b.status,b.author.id) " +
                 "from Book b where b.status='TRUE'")
+@NamedQuery(name = "Student.getAllBooksStudentId",
+        query = "select new az.spring.bookstore.wrapper.BookWrapper(b.id,b.name,b.status,b.author.id,student.id)" +
+                " from Book b where b.student.id=:studentId")
 
 @Entity
 @Setter
@@ -26,11 +29,8 @@ public class Book {
     @Enumerated(EnumType.STRING)
     private BookStatus status;
 
-    @Column(name = "author")
-    private Long authorId;
-
     @ManyToOne
-    @JoinColumn(name = "student_id", nullable = false)
+    @JoinColumn(name = "student_id")
     private Student student;
 
     @ManyToOne
