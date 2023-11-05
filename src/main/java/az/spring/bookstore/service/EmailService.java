@@ -1,8 +1,11 @@
 package az.spring.bookstore.service;
 
+import az.spring.bookstore.domain.Student;
+import az.spring.bookstore.wrapper.StudentWrapper;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -13,6 +16,9 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class EmailService {
+
+    @Value("${spring.mail.username}")
+    private String fromEmail;
 
     private final JavaMailSender mailSender;
 
@@ -47,6 +53,17 @@ public class EmailService {
                 + password;
         message.setContent(htmlMsg, "text/html");
         mailSender.send(message);
+    }
+
+    public void sendEmailToStudents(List<StudentWrapper> students, String subject, String message) {
+        for (StudentWrapper student : students) {
+            SimpleMailMessage mailMessage = new SimpleMailMessage();
+            mailMessage.setTo(student.getEmail());
+            mailMessage.setSubject(subject);
+            mailMessage.setText(message);
+            mailMessage.setFrom(fromEmail);
+            mailSender.send(mailMessage);
+        }
     }
 
 }
