@@ -32,7 +32,7 @@ spring:
             mode: ENABLE_SELECTIVE
 logging:
   file:
-    name: logs/digital_hands_oficenter.log
+    name: logs/book-store.log
   level:
     az.digitalhands.oficenter: DEBUG
     org.springframework.web: ERROR
