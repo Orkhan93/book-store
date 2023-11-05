@@ -1,5 +1,6 @@
 package az.spring.bookstore.service;
 
+import az.spring.bookstore.constans.BookStore;
 import az.spring.bookstore.domain.Author;
 import az.spring.bookstore.domain.Book;
 import az.spring.bookstore.domain.Student;
@@ -13,9 +14,11 @@ import az.spring.bookstore.mapper.BookMapper;
 import az.spring.bookstore.repository.AuthorRepository;
 import az.spring.bookstore.repository.BookRepository;
 import az.spring.bookstore.repository.StudentRepository;
+import az.spring.bookstore.repository.SubscriptionRepository;
 import az.spring.bookstore.request.BookRequest;
 import az.spring.bookstore.response.BookResponse;
 import az.spring.bookstore.wrapper.BookWrapper;
+import az.spring.bookstore.wrapper.StudentWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -36,14 +39,19 @@ public class BookService {
     private final BookMapper bookMapper;
     private final StudentRepository studentRepository;
     private final AuthorRepository authorRepository;
+    private final SubscriptionRepository subscriptionRepository;
+    private final AuthorService authorService;
+    private final EmailService emailService;
 
     public ResponseEntity<BookResponse> createBook(BookRequest bookRequest, Long authorId) {
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(author) && author.getRole().equals(Role.AUTHOR)) {
+            List<StudentWrapper> students = authorRepository.getAllStudentsByAuthorId(authorId);
             Book book = bookMapper.fromRequestToModel(bookRequest);
             book.setStatus(BookStatus.TRUE);
             book.setAuthor(author);
+            emailService.sendEmailToStudents(students, BookStore.EMAIL_SUBJECT, BookStore.EMAIL_MESSAGE);
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body(bookMapper.fromModelToResponse(bookRepository.save(book)));
         } else

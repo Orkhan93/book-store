@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    image: mysql:8.0.13
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: book-store
+      SPRING_DATABASE_URL: jdbc:mysql://mysql:3306/MYSQL_DATABASE
+      SPRING_DATABASE_USERNAME: root
+      SPRING_DATABASE_PASSWORD: 123
+    ports:
+      - 3303:3306

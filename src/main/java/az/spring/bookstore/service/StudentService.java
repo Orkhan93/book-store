@@ -1,10 +1,12 @@
 package az.spring.bookstore.service;
 
+import az.spring.bookstore.domain.Author;
 import az.spring.bookstore.domain.Student;
 import az.spring.bookstore.enums.Role;
 import az.spring.bookstore.exception.*;
 import az.spring.bookstore.exception.error.ErrorMessage;
 import az.spring.bookstore.mapper.StudentMapper;
+import az.spring.bookstore.repository.AuthorRepository;
 import az.spring.bookstore.repository.StudentRepository;
 import az.spring.bookstore.request.ChangePasswordRequest;
 import az.spring.bookstore.request.LoginRequest;
@@ -32,6 +34,7 @@ import static org.springframework.http.HttpStatus.CREATED;
 public class StudentService {
 
     private final StudentRepository studentRepository;
+    private final AuthorRepository authorRepository;
     private final StudentMapper studentMapper;
     private final JwtUtil jwtUtil;
     private final EncryptionService encryptionService;
@@ -42,7 +45,10 @@ public class StudentService {
         if (validationSignUp(studentRequest)) {
             Student student = studentRepository.findByEmailEqualsIgnoreCase(studentRequest.getEmail());
             if (Objects.isNull(student)) {
+                Author author = authorRepository.findById(studentRequest.getAuthorId()).orElseThrow(
+                        () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
                 Student saved = studentMapper.fromRequestToModel(studentRequest);
+                saved.setAuthor(author);
                 saved.setPassword(encryptionService.encryptPassword(studentRequest.getPassword()));
                 saved.setRole(Role.STUDENT);
                 log.info("Inside signUp student{}", saved);
