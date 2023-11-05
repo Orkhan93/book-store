@@ -13,5 +13,6 @@ public class StudentResponse {
     private String email;
     private String password;
     private String role;
+    private Long authorId;
 
 }

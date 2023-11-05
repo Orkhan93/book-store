@@ -8,11 +8,13 @@ import az.spring.bookstore.exception.UserNotFoundException;
 import az.spring.bookstore.exception.error.ErrorMessage;
 import az.spring.bookstore.mapper.AuthorMapper;
 import az.spring.bookstore.repository.AuthorRepository;
+import az.spring.bookstore.repository.SubscriptionRepository;
 import az.spring.bookstore.request.AuthorRequest;
 import az.spring.bookstore.request.ChangePasswordRequest;
 import az.spring.bookstore.request.LoginRequest;
 import az.spring.bookstore.response.AuthorResponse;
 import az.spring.bookstore.security.JwtUtil;
+import az.spring.bookstore.wrapper.StudentWrapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,6 +22,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
 
 import static az.spring.bookstore.constans.BookStore.BAD_CREDENTIALS;
@@ -33,10 +36,12 @@ import static org.springframework.http.HttpStatus.CREATED;
 public class AuthorService {
 
     private final AuthorRepository authorRepository;
+    private final SubscriptionRepository subscriptionRepository;
     private final AuthorMapper authorMapper;
     private final JwtUtil jwtUtil;
     private final PasswordEncoder passwordEncoder;
     private final EncryptionService encryptionService;
+    private final EmailService emailService;
 
     public ResponseEntity<?> signUp(AuthorRequest authorRequest) {
         log.info("Inside authorRequest {}", authorRequest);
@@ -93,6 +98,10 @@ public class AuthorService {
                     .body(authorMapper.fromModelToResponse(authorRepository.save(updatedAuthor)));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+
+    public List<StudentWrapper> getStudentsByAuthorId(Long authorId) {
+        return authorRepository.getAllStudentsByAuthorId(authorId);
     }
 
     private boolean validationSignUp(AuthorRequest authorRequest) {

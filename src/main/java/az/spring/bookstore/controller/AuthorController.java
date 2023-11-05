@@ -5,9 +5,12 @@ import az.spring.bookstore.request.ChangePasswordRequest;
 import az.spring.bookstore.request.LoginRequest;
 import az.spring.bookstore.response.AuthorResponse;
 import az.spring.bookstore.service.AuthorService;
+import az.spring.bookstore.wrapper.StudentWrapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/authors")
@@ -35,6 +38,11 @@ public class AuthorController {
     public void changePassword(@RequestBody ChangePasswordRequest changePasswordRequest,
                                @PathVariable(name = "authorId") Long authorId) {
         authorService.changePassword(changePasswordRequest, authorId);
+    }
+
+    @GetMapping("/get/{authorId}")
+    public List<StudentWrapper> getByAuthorId(@PathVariable(name = "authorId") Long authorId) {
+        return authorService.getStudentsByAuthorId(authorId);
     }
 
 }

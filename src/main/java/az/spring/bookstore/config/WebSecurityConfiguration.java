@@ -52,7 +52,8 @@ public class WebSecurityConfiguration {
                         "/students/signup", "/students/login",
                         "/students/changePassword/**",
                         "/books/get/**", "/books/getAll",
-                        "/students/getBooks/**", "/subscriptions/**")
+                        "/students/getBooks/**", "/subscriptions/**",
+                        "/authors/get/**", "/notifications/send-notification/**")
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
