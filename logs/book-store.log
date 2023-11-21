@@ -1,42 +1,398 @@
-2023-11-08T13:35:05.259+04:00  INFO 2312 --- [main] az.spring.bookstore.BookServiceTest      : Starting BookServiceTest using Java 19.0.2 with PID 2312 (started by User in C:\Users\User\Desktop\book-store)
-2023-11-08T13:35:05.261+04:00  INFO 2312 --- [main] az.spring.bookstore.BookServiceTest      : No active profile set, falling back to 1 default profile: "default"
-2023-11-08T13:35:06.488+04:00  INFO 2312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-08T13:35:06.583+04:00  INFO 2312 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 4 JPA repository interfaces.
-2023-11-08T13:35:08.223+04:00  INFO 2312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-08T13:35:08.678+04:00  INFO 2312 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@fbe8fd3
-2023-11-08T13:35:08.680+04:00  INFO 2312 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-08T13:35:08.754+04:00  INFO 2312 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-11-08T13:35:10.253+04:00  INFO 2312 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:35:11.539+04:00  INFO 2312 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a589070, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@747216b6, org.springframework.security.web.context.SecurityContextHolderFilter@5d8de155, org.springframework.security.web.header.HeaderWriterFilter@138d85f8, org.springframework.web.filter.CorsFilter@7ee6d5fd, org.springframework.security.web.authentication.logout.LogoutFilter@361a1e86, az.spring.bookstore.security.JwtRequestFilter@1f9a5d3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d4dac56, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ce7d43, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@358bbbe2, org.springframework.security.web.session.SessionManagementFilter@3b5f72fa, org.springframework.security.web.access.ExceptionTranslationFilter@7789719e, org.springframework.security.web.access.intercept.AuthorizationFilter@f4e235e]
-2023-11-08T13:35:12.019+04:00  INFO 2312 --- [main] az.spring.bookstore.BookServiceTest      : Started BookServiceTest in 7.261 seconds (process running for 8.84)
-2023-11-08T13:35:12.161+04:00  INFO 2312 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:35:12.165+04:00  INFO 2312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-08T13:35:12.178+04:00  INFO 2312 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-08T13:35:32.874+04:00  INFO 5208 --- [main] az.spring.bookstore.BookServiceTest      : Starting BookServiceTest using Java 19.0.2 with PID 5208 (started by User in C:\Users\User\Desktop\book-store)
-2023-11-08T13:35:32.877+04:00  INFO 5208 --- [main] az.spring.bookstore.BookServiceTest      : No active profile set, falling back to 1 default profile: "default"
-2023-11-08T13:35:33.815+04:00  INFO 5208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-08T13:35:33.934+04:00  INFO 5208 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 4 JPA repository interfaces.
-2023-11-08T13:35:35.658+04:00  INFO 5208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-08T13:35:36.131+04:00  INFO 5208 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@201a8ea7
-2023-11-08T13:35:36.135+04:00  INFO 5208 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-08T13:35:36.192+04:00  INFO 5208 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-11-08T13:35:38.059+04:00  INFO 5208 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:35:39.352+04:00  INFO 5208 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6bd5aa8b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3af17313, org.springframework.security.web.context.SecurityContextHolderFilter@5037f491, org.springframework.security.web.header.HeaderWriterFilter@532782f5, org.springframework.web.filter.CorsFilter@1737acc0, org.springframework.security.web.authentication.logout.LogoutFilter@2f29046b, az.spring.bookstore.security.JwtRequestFilter@5397d41e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@511ba9c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3debeb5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30ffc3c0, org.springframework.security.web.session.SessionManagementFilter@6c65c6f0, org.springframework.security.web.access.ExceptionTranslationFilter@5e5f5ddf, org.springframework.security.web.access.intercept.AuthorizationFilter@83b39c3]
-2023-11-08T13:35:39.795+04:00  INFO 5208 --- [main] az.spring.bookstore.BookServiceTest      : Started BookServiceTest in 7.364 seconds (process running for 8.896)
-2023-11-08T13:35:39.914+04:00  INFO 5208 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:35:39.919+04:00  INFO 5208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-08T13:35:39.933+04:00  INFO 5208 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2023-11-08T13:38:44.691+04:00  INFO 16524 --- [main] az.spring.bookstore.BookServiceTest      : Starting BookServiceTest using Java 19.0.2 with PID 16524 (started by User in C:\Users\User\Desktop\book-store)
-2023-11-08T13:38:44.693+04:00  INFO 16524 --- [main] az.spring.bookstore.BookServiceTest      : No active profile set, falling back to 1 default profile: "default"
-2023-11-08T13:38:45.589+04:00  INFO 16524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-11-08T13:38:45.668+04:00  INFO 16524 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 4 JPA repository interfaces.
-2023-11-08T13:38:47.255+04:00  INFO 16524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-11-08T13:38:47.647+04:00  INFO 16524 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fafa7b5
-2023-11-08T13:38:47.649+04:00  INFO 16524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-11-08T13:38:47.723+04:00  INFO 16524 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-11-08T13:38:49.140+04:00  INFO 16524 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:38:50.330+04:00  INFO 16524 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@358bbbe2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b9e7633, org.springframework.security.web.context.SecurityContextHolderFilter@2ce7d43, org.springframework.security.web.header.HeaderWriterFilter@4af8ff3, org.springframework.web.filter.CorsFilter@1fbd0850, org.springframework.security.web.authentication.logout.LogoutFilter@4ce4c097, az.spring.bookstore.security.JwtRequestFilter@2cc7b63d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ca55d5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16576a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57bc7f67, org.springframework.security.web.session.SessionManagementFilter@5d8de155, org.springframework.security.web.access.ExceptionTranslationFilter@3edb09b9, org.springframework.security.web.access.intercept.AuthorizationFilter@a589070]
-2023-11-08T13:38:50.730+04:00  INFO 16524 --- [main] az.spring.bookstore.BookServiceTest      : Started BookServiceTest in 6.517 seconds (process running for 7.851)
-2023-11-08T13:38:50.900+04:00  INFO 16524 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-11-08T13:38:50.903+04:00  INFO 16524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-11-08T13:38:50.918+04:00  INFO 16524 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T10:25:03.956+04:00  INFO 15088 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Starting BookstoreApplication using Java 19.0.2 with PID 15088 (C:\Users\User\Desktop\book-store\target\classes started by User in C:\Users\User\Desktop\book-store)
+2023-11-21T10:25:03.964+04:00  INFO 15088 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T10:25:04.052+04:00  INFO 15088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T10:25:04.053+04:00  INFO 15088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T10:25:05.368+04:00  INFO 15088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T10:25:05.474+04:00  INFO 15088 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 4 JPA repository interfaces.
+2023-11-21T10:25:06.419+04:00  INFO 15088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-11-21T10:25:06.435+04:00  INFO 15088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T10:25:06.435+04:00  INFO 15088 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-11-21T10:25:06.523+04:00  INFO 15088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T10:25:06.524+04:00  INFO 15088 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2469 ms
+2023-11-21T10:25:07.590+04:00  INFO 15088 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T10:25:08.341+04:00  INFO 15088 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3cb4d5df
+2023-11-21T10:25:08.346+04:00  INFO 15088 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T10:25:08.459+04:00  INFO 15088 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T10:25:10.629+04:00  INFO 15088 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:25:12.142+04:00  INFO 15088 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4cb37600, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33f25707, org.springframework.security.web.context.SecurityContextHolderFilter@45338861, org.springframework.security.web.header.HeaderWriterFilter@3e0e5175, org.springframework.web.filter.CorsFilter@2597ee84, org.springframework.security.web.authentication.logout.LogoutFilter@275cd3e0, az.spring.bookstore.security.JwtRequestFilter@3f1d191e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72b124b7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5738bb77, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a473433, org.springframework.security.web.session.SessionManagementFilter@70d6e1f3, org.springframework.security.web.access.ExceptionTranslationFilter@576a67d0, org.springframework.security.web.access.intercept.AuthorizationFilter@2acabe97]
+2023-11-21T10:25:12.515+04:00  INFO 15088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T10:25:12.596+04:00  INFO 15088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2023-11-21T10:25:12.614+04:00  INFO 15088 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Started BookstoreApplication in 9.496 seconds (process running for 10.724)
+2023-11-21T10:25:20.371+04:00  INFO 15088 --- [http-nio-8585-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T10:25:20.517+04:00  INFO 15088 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : Inside authorRequest az.spring.bookstore.request.AuthorRequest@2d92b2a9
+2023-11-21T10:25:20.679+04:00 ERROR 15088 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : authorRequest az.spring.bookstore.request.AuthorRequest@2d92b2a9
+2023-11-21T10:26:03.337+04:00  INFO 15088 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:26:03.340+04:00  INFO 15088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T10:26:03.349+04:00  INFO 15088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T10:31:48.090+04:00  INFO 16404 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Starting BookstoreApplication using Java 19.0.2 with PID 16404 (C:\Users\User\Desktop\book-store\target\classes started by User in C:\Users\User\Desktop\book-store)
+2023-11-21T10:31:48.092+04:00 DEBUG 16404 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-11-21T10:31:48.093+04:00  INFO 16404 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T10:31:48.151+04:00  INFO 16404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T10:31:48.151+04:00  INFO 16404 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T10:31:48.806+04:00  INFO 16404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T10:31:48.877+04:00  INFO 16404 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+2023-11-21T10:31:49.454+04:00  INFO 16404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-11-21T10:31:49.462+04:00  INFO 16404 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T10:31:49.462+04:00  INFO 16404 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-11-21T10:31:49.510+04:00  INFO 16404 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T10:31:49.510+04:00  INFO 16404 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1358 ms
+2023-11-21T10:31:49.925+04:00  INFO 16404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T10:31:50.187+04:00  INFO 16404 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b825534
+2023-11-21T10:31:50.189+04:00  INFO 16404 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T10:31:50.234+04:00  INFO 16404 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T10:31:51.319+04:00  INFO 16404 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:31:51.676+04:00 DEBUG 16404 --- [restartedMain] a.s.bookstore.security.JwtRequestFilter  : Filter 'jwtRequestFilter' configured for use
+2023-11-21T10:31:52.113+04:00  INFO 16404 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3aca652e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fb15d12, org.springframework.security.web.context.SecurityContextHolderFilter@4ea6f479, org.springframework.security.web.header.HeaderWriterFilter@57b97631, org.springframework.web.filter.CorsFilter@54337900, org.springframework.security.web.authentication.logout.LogoutFilter@608c2406, az.spring.bookstore.security.JwtRequestFilter@ebc2f93, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@611af03f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3073d3d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5fc82404, org.springframework.security.web.session.SessionManagementFilter@3403f4c4, org.springframework.security.web.access.ExceptionTranslationFilter@1de8be7e, org.springframework.security.web.access.intercept.AuthorizationFilter@33d2c184]
+2023-11-21T10:31:52.324+04:00  INFO 16404 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T10:31:52.372+04:00  INFO 16404 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2023-11-21T10:31:52.382+04:00  INFO 16404 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Started BookstoreApplication in 4.835 seconds (process running for 5.595)
+2023-11-21T10:32:18.260+04:00  INFO 16404 --- [http-nio-8585-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T10:32:18.393+04:00  INFO 16404 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : Inside authorRequest az.spring.bookstore.request.AuthorRequest@473703db
+2023-11-21T10:32:18.622+04:00  INFO 16404 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : Inside signUp authoraz.spring.bookstore.domain.Author@3226dcaa
+2023-11-21T10:32:54.786+04:00  INFO 16404 --- [http-nio-8585-exec-3] a.s.bookstore.service.StudentService     : Inside studentRequest az.spring.bookstore.request.StudentRequest@128abf30
+2023-11-21T10:32:54.939+04:00  INFO 16404 --- [http-nio-8585-exec-3] a.s.bookstore.service.StudentService     : Inside signUp studentaz.spring.bookstore.domain.Student@1d4fcad1
+2023-11-21T10:33:10.911+04:00  INFO 16404 --- [http-nio-8585-exec-4] a.s.bookstore.service.StudentService     : Inside studentRequest az.spring.bookstore.request.StudentRequest@2f48977c
+2023-11-21T10:33:11.031+04:00  INFO 16404 --- [http-nio-8585-exec-4] a.s.bookstore.service.StudentService     : Inside signUp studentaz.spring.bookstore.domain.Student@7fef2376
+2023-11-21T10:37:32.117+04:00  INFO 16404 --- [http-nio-8585-exec-8] a.s.bookstore.service.StudentService     : Inside studentRequest az.spring.bookstore.request.StudentRequest@1560652b
+2023-11-21T10:37:49.295+04:00  INFO 16404 --- [http-nio-8585-exec-10] a.s.bookstore.service.StudentService     : Inside loginRequest studentaz.spring.bookstore.request.LoginRequest@2e89b653
+2023-11-21T10:40:13.842+04:00  INFO 16404 --- [http-nio-8585-exec-3] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mail.com
+2023-11-21T10:40:37.102+04:00  INFO 16404 --- [http-nio-8585-exec-4] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mail.com
+2023-11-21T10:40:37.117+04:00 ERROR 16404 --- [http-nio-8585-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+az.spring.bookstore.exception.UserNotFoundException: User not found : 
+	at az.spring.bookstore.security.UserDetailServiceImpl.loadUserByUsername(UserDetailServiceImpl.java:55) ~[classes/:na]
+	at az.spring.bookstore.security.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:48) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilterInternal(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-11-21T10:41:28.678+04:00  INFO 16404 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:41:28.685+04:00  INFO 16404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T10:41:28.696+04:00  INFO 16404 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T10:41:33.531+04:00  INFO 10804 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Starting BookstoreApplication using Java 19.0.2 with PID 10804 (C:\Users\User\Desktop\book-store\target\classes started by User in C:\Users\User\Desktop\book-store)
+2023-11-21T10:41:33.533+04:00 DEBUG 10804 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-11-21T10:41:33.534+04:00  INFO 10804 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T10:41:33.599+04:00  INFO 10804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T10:41:33.600+04:00  INFO 10804 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T10:41:34.404+04:00  INFO 10804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T10:41:34.497+04:00  INFO 10804 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 4 JPA repository interfaces.
+2023-11-21T10:41:35.176+04:00  INFO 10804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-11-21T10:41:35.191+04:00  INFO 10804 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T10:41:35.192+04:00  INFO 10804 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-11-21T10:41:35.262+04:00  INFO 10804 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T10:41:35.263+04:00  INFO 10804 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1662 ms
+2023-11-21T10:41:35.717+04:00  INFO 10804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T10:41:36.013+04:00  INFO 10804 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f2b06c2
+2023-11-21T10:41:36.015+04:00  INFO 10804 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T10:41:36.070+04:00  INFO 10804 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T10:41:37.185+04:00  INFO 10804 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:41:37.546+04:00 DEBUG 10804 --- [restartedMain] a.s.bookstore.security.JwtRequestFilter  : Filter 'jwtRequestFilter' configured for use
+2023-11-21T10:41:37.980+04:00  INFO 10804 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4da682ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e76231e, org.springframework.security.web.context.SecurityContextHolderFilter@6c3f9203, org.springframework.security.web.header.HeaderWriterFilter@4279b44c, org.springframework.web.filter.CorsFilter@7c3dacba, org.springframework.security.web.authentication.logout.LogoutFilter@1acca361, az.spring.bookstore.security.JwtRequestFilter@6f9bdd97, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@548551fc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c461e5c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@608c2406, org.springframework.security.web.session.SessionManagementFilter@495e4c71, org.springframework.security.web.access.ExceptionTranslationFilter@341a1fbd, org.springframework.security.web.access.intercept.AuthorizationFilter@721c2bfa]
+2023-11-21T10:41:38.210+04:00  INFO 10804 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T10:41:38.250+04:00  INFO 10804 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2023-11-21T10:41:38.261+04:00  INFO 10804 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Started BookstoreApplication in 5.268 seconds (process running for 6.044)
+2023-11-21T10:41:54.862+04:00  INFO 10804 --- [http-nio-8585-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T10:41:54.969+04:00  INFO 10804 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mail.com
+2023-11-21T10:41:55.092+04:00 ERROR 10804 --- [http-nio-8585-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+az.spring.bookstore.exception.UserNotFoundException: User not found : 
+	at az.spring.bookstore.security.UserDetailServiceImpl.loadUserByUsername(UserDetailServiceImpl.java:55) ~[classes/:na]
+	at az.spring.bookstore.security.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:48) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilterInternal(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-11-21T10:43:07.902+04:00  INFO 10804 --- [http-nio-8585-exec-4] a.s.bookstore.service.StudentService     : Inside loginRequest studentaz.spring.bookstore.request.LoginRequest@9f40e10
+2023-11-21T10:43:17.687+04:00  INFO 10804 --- [http-nio-8585-exec-6] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:44:07.794+04:00  INFO 10804 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:47:07.514+04:00  INFO 10804 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:47:07.519+04:00  INFO 10804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T10:47:07.530+04:00  INFO 10804 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T10:47:12.560+04:00  INFO 6056 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Starting BookstoreApplication using Java 19.0.2 with PID 6056 (C:\Users\User\Desktop\book-store\target\classes started by User in C:\Users\User\Desktop\book-store)
+2023-11-21T10:47:12.561+04:00 DEBUG 6056 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-11-21T10:47:12.562+04:00  INFO 6056 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T10:47:12.629+04:00  INFO 6056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T10:47:12.629+04:00  INFO 6056 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T10:47:13.365+04:00  INFO 6056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T10:47:13.431+04:00  INFO 6056 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 4 JPA repository interfaces.
+2023-11-21T10:47:14.003+04:00  INFO 6056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-11-21T10:47:14.014+04:00  INFO 6056 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T10:47:14.015+04:00  INFO 6056 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-11-21T10:47:14.069+04:00  INFO 6056 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T10:47:14.070+04:00  INFO 6056 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1439 ms
+2023-11-21T10:47:14.493+04:00  INFO 6056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T10:47:14.769+04:00  INFO 6056 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7cb85590
+2023-11-21T10:47:14.771+04:00  INFO 6056 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T10:47:14.821+04:00  INFO 6056 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T10:47:16.000+04:00  INFO 6056 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:47:16.444+04:00 DEBUG 6056 --- [restartedMain] a.s.bookstore.security.JwtRequestFilter  : Filter 'jwtRequestFilter' configured for use
+2023-11-21T10:47:16.965+04:00  INFO 6056 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1a2c59b0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4013acdd, org.springframework.security.web.context.SecurityContextHolderFilter@670ec59d, org.springframework.security.web.header.HeaderWriterFilter@26671bc0, org.springframework.web.filter.CorsFilter@2c5d4dde, org.springframework.security.web.authentication.logout.LogoutFilter@7bdaca14, az.spring.bookstore.security.JwtRequestFilter@4e8f9a2d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4dc5c1ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4b794f1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@301c637b, org.springframework.security.web.session.SessionManagementFilter@608c2406, org.springframework.security.web.access.ExceptionTranslationFilter@6913fa12, org.springframework.security.web.access.intercept.AuthorizationFilter@3cbccb3b]
+2023-11-21T10:47:17.238+04:00  INFO 6056 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T10:47:17.281+04:00  INFO 6056 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2023-11-21T10:47:17.291+04:00  INFO 6056 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Started BookstoreApplication in 5.311 seconds (process running for 6.169)
+2023-11-21T10:47:20.522+04:00  INFO 6056 --- [http-nio-8585-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T10:47:20.606+04:00  INFO 6056 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:47:31.002+04:00  INFO 6056 --- [http-nio-8585-exec-3] a.s.bookstore.service.StudentService     : Inside loginRequest studentaz.spring.bookstore.request.LoginRequest@49ab6418
+2023-11-21T10:47:47.361+04:00  INFO 6056 --- [http-nio-8585-exec-4] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:48:23.509+04:00  INFO 6056 --- [http-nio-8585-exec-6] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:48:27.782+04:00  INFO 6056 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:48:35.380+04:00  INFO 6056 --- [http-nio-8585-exec-5] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:48:38.830+04:00  INFO 6056 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:48:41.992+04:00  INFO 6056 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:50:59.314+04:00  INFO 6056 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:51:32.569+04:00  INFO 6056 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:51:32.574+04:00  INFO 6056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T10:51:32.582+04:00  INFO 6056 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-11-21T10:51:37.588+04:00  INFO 8688 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Starting BookstoreApplication using Java 19.0.2 with PID 8688 (C:\Users\User\Desktop\book-store\target\classes started by User in C:\Users\User\Desktop\book-store)
+2023-11-21T10:51:37.590+04:00 DEBUG 8688 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Running with Spring Boot v3.0.0, Spring v6.0.2
+2023-11-21T10:51:37.591+04:00  INFO 8688 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-11-21T10:51:37.647+04:00  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-11-21T10:51:37.647+04:00  INFO 8688 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-11-21T10:51:38.348+04:00  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-21T10:51:38.423+04:00  INFO 8688 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+2023-11-21T10:51:39.017+04:00  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8585 (http)
+2023-11-21T10:51:39.034+04:00  INFO 8688 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-11-21T10:51:39.034+04:00  INFO 8688 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]
+2023-11-21T10:51:39.079+04:00  INFO 8688 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-11-21T10:51:39.079+04:00  INFO 8688 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2023-11-21T10:51:39.547+04:00  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-11-21T10:51:39.838+04:00  INFO 8688 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4ee6450a
+2023-11-21T10:51:39.838+04:00  INFO 8688 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-11-21T10:51:39.894+04:00  INFO 8688 --- [restartedMain] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-11-21T10:51:41.001+04:00  INFO 8688 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T10:51:41.333+04:00 DEBUG 8688 --- [restartedMain] a.s.bookstore.security.JwtRequestFilter  : Filter 'jwtRequestFilter' configured for use
+2023-11-21T10:51:41.811+04:00  INFO 8688 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@28d8c48f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d3bad8d, org.springframework.security.web.context.SecurityContextHolderFilter@1acca361, org.springframework.security.web.header.HeaderWriterFilter@65289cbd, org.springframework.web.filter.CorsFilter@6f0ff292, org.springframework.security.web.authentication.logout.LogoutFilter@5fc82404, az.spring.bookstore.security.JwtRequestFilter@43ae8ee1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6913fa12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59cf6c33, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2534e137, org.springframework.security.web.session.SessionManagementFilter@63090205, org.springframework.security.web.access.ExceptionTranslationFilter@618617c2, org.springframework.security.web.access.intercept.AuthorizationFilter@77244243]
+2023-11-21T10:51:42.023+04:00  INFO 8688 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-11-21T10:51:42.070+04:00  INFO 8688 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8585 (http) with context path ''
+2023-11-21T10:51:42.070+04:00  INFO 8688 --- [restartedMain] a.spring.bookstore.BookstoreApplication  : Started BookstoreApplication in 5.069 seconds (process running for 5.932)
+2023-11-21T10:51:49.025+04:00  INFO 8688 --- [http-nio-8585-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-21T10:51:49.123+04:00  INFO 8688 --- [http-nio-8585-exec-2] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:53:19.396+04:00  INFO 8688 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:54:26.058+04:00  INFO 8688 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:54:33.057+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:54:55.306+04:00  INFO 8688 --- [http-nio-8585-exec-9] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:55:46.561+04:00  INFO 8688 --- [http-nio-8585-exec-4] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:55:56.576+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:56:01.049+04:00  INFO 8688 --- [http-nio-8585-exec-2] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:56:04.376+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:56:07.763+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:56:10.627+04:00  INFO 8688 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:57:57.282+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:57:57.421+04:00 ERROR 8688 --- [http-nio-8585-exec-8] a.s.b.exception.handler.CustomException  : handlerAuthorNotFoundException Author not found : 
+2023-11-21T10:58:16.743+04:00  INFO 8688 --- [http-nio-8585-exec-9] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:58:16.866+04:00 ERROR 8688 --- [http-nio-8585-exec-9] a.s.b.exception.handler.CustomException  : handlerStudentNotFoundException Student not found : 
+2023-11-21T10:58:21.358+04:00  INFO 8688 --- [http-nio-8585-exec-4] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T10:58:47.671+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:10:16.948+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:10:17.091+04:00 ERROR 8688 --- [http-nio-8585-exec-5] a.s.b.exception.handler.CustomException  : handlerBookNotFoundException Book not found : 
+2023-11-21T11:10:21.632+04:00  INFO 8688 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:10:59.588+04:00 ERROR 8688 --- [http-nio-8585-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-11-03T17:59:22Z. Current time: 2023-11-21T07:10:59Z, a difference of 1516297586 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at az.spring.bookstore.security.JwtUtil.extractAllClaims(JwtUtil.java:37) ~[classes/:na]
+	at az.spring.bookstore.security.JwtUtil.extractClaims(JwtUtil.java:42) ~[classes/:na]
+	at az.spring.bookstore.security.JwtUtil.extractUsername(JwtUtil.java:25) ~[classes/:na]
+	at az.spring.bookstore.security.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:42) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilterInternal(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.0.0.jar:6.0.0]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:351) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.2.jar:6.0.2]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:185) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:158) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:119) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:400) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1739) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.1.jar:10.1.1]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-11-21T11:11:04.003+04:00  INFO 8688 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:11:29.714+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:12:53.054+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:12:56.892+04:00  INFO 8688 --- [http-nio-8585-exec-2] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:13:00.244+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:13:22.853+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:13:26.744+04:00  INFO 8688 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:18:09.756+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.bookstore.service.AuthorService      : Inside authorRequest az.spring.bookstore.request.AuthorRequest@14af3f38
+2023-11-21T11:18:09.872+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.bookstore.service.AuthorService      : Inside signUp authoraz.spring.bookstore.domain.Author@5a15842
+2023-11-21T11:18:25.687+04:00  INFO 8688 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : Inside authorRequest az.spring.bookstore.request.AuthorRequest@4ed0eb3e
+2023-11-21T11:18:25.693+04:00 ERROR 8688 --- [http-nio-8585-exec-2] a.s.bookstore.service.AuthorService      : authorRequest az.spring.bookstore.request.AuthorRequest@4ed0eb3e
+2023-11-21T11:18:30.951+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.bookstore.service.AuthorService      : Inside loginRequest author az.spring.bookstore.request.LoginRequest@43725d7b
+2023-11-21T11:19:35.627+04:00  INFO 8688 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername orxan@mail.com
+2023-11-21T11:19:41.259+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername orxan@mail.com
+2023-11-21T11:19:41.397+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.bookstore.service.AuthorService      : Inside changePasswordRequest authoraz.spring.bookstore.request.ChangePasswordRequest@e056b81
+2023-11-21T11:19:41.405+04:00 ERROR 8688 --- [http-nio-8585-exec-8] a.s.b.exception.handler.CustomException  : handlerUserNotFoundException Author not found : 
+2023-11-21T11:19:52.493+04:00  INFO 8688 --- [http-nio-8585-exec-9] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername orxan@mail.com
+2023-11-21T11:19:52.608+04:00  INFO 8688 --- [http-nio-8585-exec-9] a.s.bookstore.service.AuthorService      : Inside changePasswordRequest authoraz.spring.bookstore.request.ChangePasswordRequest@5f947977
+2023-11-21T11:19:52.743+04:00 ERROR 8688 --- [http-nio-8585-exec-9] a.s.b.exception.handler.CustomException  : handlerIncorrectPasswordException The passwords you entered do not match: 
+2023-11-21T11:20:01.957+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername orxan@mail.com
+2023-11-21T11:20:02.088+04:00  INFO 8688 --- [http-nio-8585-exec-1] a.s.bookstore.service.AuthorService      : Inside changePasswordRequest authoraz.spring.bookstore.request.ChangePasswordRequest@471b080d
+2023-11-21T11:20:02.192+04:00 ERROR 8688 --- [http-nio-8585-exec-1] a.s.b.exception.handler.CustomException  : handlerIncorrectPasswordException The password you entered is incorrect: 
+2023-11-21T11:20:12.689+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername orxan@mail.com
+2023-11-21T11:20:12.817+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.bookstore.service.AuthorService      : Inside changePasswordRequest authoraz.spring.bookstore.request.ChangePasswordRequest@5e9c719c
+2023-11-21T11:20:13.060+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.bookstore.service.AuthorService      : changePassword authoraz.spring.bookstore.domain.Author@414c80a
+2023-11-21T11:21:31.223+04:00  INFO 8688 --- [http-nio-8585-exec-3] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:22:15.323+04:00  INFO 8688 --- [http-nio-8585-exec-7] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:22:18.978+04:00  INFO 8688 --- [http-nio-8585-exec-8] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:23:14.209+04:00  INFO 8688 --- [http-nio-8585-exec-9] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:23:24.596+04:00  INFO 8688 --- [http-nio-8585-exec-4] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:24:31.557+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.bookstore.service.StudentService     : Inside studentRequest az.spring.bookstore.request.StudentRequest@473b401f
+2023-11-21T11:24:31.666+04:00  INFO 8688 --- [http-nio-8585-exec-6] a.s.bookstore.service.StudentService     : Inside signUp studentaz.spring.bookstore.domain.Student@6bc310a1
+2023-11-21T11:24:40.708+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.bookstore.service.StudentService     : Inside studentRequest az.spring.bookstore.request.StudentRequest@64cfcb5f
+2023-11-21T11:24:40.814+04:00  INFO 8688 --- [http-nio-8585-exec-5] a.s.bookstore.service.StudentService     : Inside signUp studentaz.spring.bookstore.domain.Student@5c940a1f
+2023-11-21T11:25:28.892+04:00  INFO 8688 --- [http-nio-8585-exec-10] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:26:16.985+04:00  INFO 8688 --- [http-nio-8585-exec-3] a.s.b.security.UserDetailServiceImpl     : Inside loadUserByUsername student@mailinator.com
+2023-11-21T11:27:00.248+04:00  INFO 8688 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-21T11:27:00.262+04:00  INFO 8688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-21T11:27:00.265+04:00  INFO 8688 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

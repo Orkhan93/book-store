@@ -96,6 +96,7 @@ public class StudentService {
                 () -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.STUDENT_NOT_FOUND));
         if (Objects.nonNull(student)) {
             Student updatedStudent = studentMapper.fromRequestToModel(studentRequest);
+            updatedStudent.setRole(Role.STUDENT);
             updatedStudent.setPassword(encryptionService.encryptPassword(studentRequest.getPassword()));
             return ResponseEntity.status(HttpStatus.OK)
                     .body(studentMapper.fromModelToResponse(studentRepository.save(updatedStudent)));
@@ -105,6 +106,12 @@ public class StudentService {
 
     public ResponseEntity<List<BookWrapper>> getAllBooksByStudentId(Long studentId) {
         return ResponseEntity.status(HttpStatus.OK).body(studentRepository.getAllBooksStudentId(studentId));
+    }
+
+    public void deleteStudentById(Long studentId) {
+        Student student = studentRepository.findById(studentId).orElseThrow(
+                () -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.USER_NOT_FOUND));
+        studentRepository.deleteById(studentId);
     }
 
     private boolean validationSignUp(StudentRequest studentRequest) {
