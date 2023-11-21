@@ -93,6 +93,7 @@ public class AuthorService {
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(author)) {
             Author updatedAuthor = authorMapper.fromRequestToModel(authorRequest);
+            updatedAuthor.setRole(Role.AUTHOR);
             updatedAuthor.setPassword(encryptionService.encryptPassword(authorRequest.getPassword()));
             return ResponseEntity.status(HttpStatus.OK)
                     .body(authorMapper.fromModelToResponse(authorRepository.save(updatedAuthor)));

@@ -47,4 +47,9 @@ public class StudentController {
         return studentService.getAllBooksByStudentId(studentId);
     }
 
+    @DeleteMapping("/delete/{studentId}")
+    public void deleteStudentById(@PathVariable(name = "studentId") Long studentId) {
+        studentService.deleteStudentById(studentId);
+    }
+
 }
