@@ -92,12 +92,15 @@ public class StudentService {
     }
 
     public ResponseEntity<StudentResponse> updateStudent(StudentRequest studentRequest) {
+        log.info("Inside studentRequest {}", studentRequest);
         Student student = studentRepository.findById(studentRequest.getId()).orElseThrow(
                 () -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.STUDENT_NOT_FOUND));
         if (Objects.nonNull(student)) {
+            log.info("Inside student {}", student);
             Student updatedStudent = studentMapper.fromRequestToModel(studentRequest);
             updatedStudent.setRole(Role.STUDENT);
             updatedStudent.setPassword(encryptionService.encryptPassword(studentRequest.getPassword()));
+            log.info("Inside updateStudent {}", updatedStudent);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(studentMapper.fromModelToResponse(studentRepository.save(updatedStudent)));
         }
@@ -105,12 +108,14 @@ public class StudentService {
     }
 
     public ResponseEntity<List<BookWrapper>> getAllBooksByStudentId(Long studentId) {
+        log.info("Inside getAllBooksByStudentId {}", studentId);
         return ResponseEntity.status(HttpStatus.OK).body(studentRepository.getAllBooksStudentId(studentId));
     }
 
     public void deleteStudentById(Long studentId) {
         Student student = studentRepository.findById(studentId).orElseThrow(
                 () -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.USER_NOT_FOUND));
+        log.info("Inside deleteStudentById {}", student);
         studentRepository.deleteById(studentId);
     }
 

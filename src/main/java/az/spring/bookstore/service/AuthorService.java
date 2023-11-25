@@ -92,9 +92,11 @@ public class AuthorService {
         Author author = authorRepository.findById(authorRequest.getId()).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(author)) {
+            log.info("Inside author {}", author);
             Author updatedAuthor = authorMapper.fromRequestToModel(authorRequest);
             updatedAuthor.setRole(Role.AUTHOR);
             updatedAuthor.setPassword(encryptionService.encryptPassword(authorRequest.getPassword()));
+            log.info("Inside updateAuthor {}", updatedAuthor);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(authorMapper.fromModelToResponse(authorRepository.save(updatedAuthor)));
         }
@@ -102,6 +104,7 @@ public class AuthorService {
     }
 
     public List<StudentWrapper> getStudentsByAuthorId(Long authorId) {
+        log.info("Inside getStudentsByAuthorId {}", authorRepository.getAllStudentsByAuthorId(authorId));
         return authorRepository.getAllStudentsByAuthorId(authorId);
     }
 

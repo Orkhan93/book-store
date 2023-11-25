@@ -44,6 +44,7 @@ public class BookService {
     private final EmailService emailService;
 
     public ResponseEntity<BookResponse> createBook(BookRequest bookRequest, Long authorId) {
+        log.info("Inside bookRequest {}", bookRequest);
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(author) && author.getRole().equals(Role.AUTHOR)) {
@@ -52,6 +53,7 @@ public class BookService {
             book.setStatus(BookStatus.TRUE);
             book.setAuthor(author);
             emailService.sendEmailToStudents(students, BookStore.EMAIL_SUBJECT, BookStore.EMAIL_MESSAGE);
+            log.info("Inside createBook {}", book);
             return ResponseEntity.status(HttpStatus.CREATED)
                     .body(bookMapper.fromModelToResponse(bookRepository.save(book)));
         } else
@@ -59,6 +61,7 @@ public class BookService {
     }
 
     public ResponseEntity<BookResponse> updateBook(BookRequest bookRequest, Long authorId) {
+        log.info("Inside bookRequest {}", bookRequest);
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(author) && author.getRole().equals(Role.AUTHOR)) {
@@ -67,6 +70,7 @@ public class BookService {
             if (Objects.nonNull(book)) {
                 Book updatedBook = bookMapper.fromRequestToModel(bookRequest);
                 updatedBook.setAuthor(author);
+                log.info("Inside updatedBook {}", updatedBook);
                 return ResponseEntity.status(HttpStatus.OK).body(bookMapper.fromModelToResponse(updatedBook));
             } else
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
@@ -78,12 +82,14 @@ public class BookService {
         Book book = bookRepository.findById(bookId).orElseThrow(
                 () -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
         if (Objects.nonNull(book)) {
+            log.info("Inside getBookById {}", book);
             return ResponseEntity.status(HttpStatus.OK).body(bookMapper.fromModelToResponse(book));
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
     }
 
     public ResponseEntity<List<BookWrapper>> getAllBooksByStatus() {
+        log.info("Inside getAllBooksByStatus {}", bookRepository.getAllBooks());
         return ResponseEntity.status(HttpStatus.OK).body(bookRepository.getAllBooks());
     }
 
@@ -91,11 +97,13 @@ public class BookService {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.USER_NOT_FOUND));
         if (Objects.nonNull(student)) {
+            log.info("Inside student {}", student);
             Book book = bookRepository.findById(bookId).orElseThrow(
                     () -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
             if (book.getStatus().equals(BookStatus.TRUE) && Objects.isNull(book.getStudent())) {
                 book.setStudent(student);
                 book.setStatus(BookStatus.FALSE);
+                log.info("Inside addSpecificBookByStudent {}", book);
                 return ResponseEntity.status(HttpStatus.OK)
                         .body(bookMapper.fromModelToResponse(bookRepository.save(book)));
             }
@@ -109,10 +117,10 @@ public class BookService {
                 .orElseThrow(() -> new StudentNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.USER_NOT_FOUND));
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
-
         if (student.getId().equals(book.getStudent().getId()) && book.getStatus().equals(BookStatus.FALSE)) {
             book.setStudent(null);
             book.setStatus(BookStatus.TRUE);
+            log.info("Inside returnBookByStudent {}", book);
             bookRepository.save(book);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(bookMapper.fromModelToResponse(book));
@@ -126,6 +134,7 @@ public class BookService {
         if (Objects.nonNull(author) && author.getRole().equals(Role.AUTHOR)) {
             Book book = bookRepository.findById(bookId).orElseThrow(
                     () -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
+            log.info("Inside deleteBookById {}", book);
             bookRepository.delete(book);
         }
     }
