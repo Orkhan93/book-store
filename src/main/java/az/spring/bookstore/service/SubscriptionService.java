@@ -35,9 +35,12 @@ public class SubscriptionService {
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
         if (Objects.nonNull(student) && Objects.nonNull(author)) {
+            log.info("Inside student {}", student);
+            log.info("Inside author {}", author);
             Subscription subscription = new Subscription();
             subscription.setStudent(student);
             subscription.setAuthor(author);
+            log.info("Inside subscribeStudentToAuthor {}", subscription);
             return ResponseEntity.status(HttpStatus.OK)
                     .body(subscriptionMapper.fromModelToResponse(subscriptionRepository.save(subscription)));
         }
