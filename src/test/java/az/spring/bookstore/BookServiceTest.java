@@ -26,7 +26,6 @@ import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.junit.jupiter.MockitoSettings;
 import org.mockito.quality.Strictness;
-import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,8 +69,8 @@ public class BookServiceTest {
         when(bookRepository.findById(Util.book().getId())).thenReturn(Optional.of(Util.book()));
         when(bookRepository.findById(0L)).thenThrow(BookNotFoundException.class);
         String name = "new-Book";
-        ResponseEntity<BookResponse> bookResponse = bookService.getBookById(1L);
-        assertEquals(name, bookResponse.getBody().getName());
+        BookResponse bookResponse = bookService.getBookById(1L);
+        assertEquals(name, bookResponse.getName());
         assertThat(bookResponse).isNotNull();
 
         verify(bookRepository).findById(Util.book().getId());
@@ -116,7 +115,7 @@ public class BookServiceTest {
         String name = "new-Book";
         Long authorId = 1L;
 
-        ResponseEntity<BookResponse> bookResponse = bookService.createBook(Util.bookRequest(), Util.author().getId());
+        BookResponse bookResponse = bookService.createBook(Util.bookRequest(), Util.author().getId());
         assertThat(bookResponse).isNotNull();
     }
 

@@ -5,6 +5,7 @@ import az.spring.bookstore.response.BookResponse;
 import az.spring.bookstore.service.BookService;
 import az.spring.bookstore.wrapper.BookWrapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,18 +21,18 @@ public class BookController {
     @PostMapping("/add/{authorId}")
     public ResponseEntity<BookResponse> createBook(@RequestBody BookRequest bookRequest,
                                                    @PathVariable(name = "authorId") Long authorId) {
-        return bookService.createBook(bookRequest, authorId);
+        return ResponseEntity.status(HttpStatus.CREATED).body(bookService.createBook(bookRequest, authorId));
     }
 
     @PutMapping("/update/{authorId}")
     public ResponseEntity<BookResponse> updateBook(@RequestBody BookRequest bookRequest,
                                                    @PathVariable(name = "authorId") Long authorId) {
-        return bookService.updateBook(bookRequest, authorId);
+        return ResponseEntity.status(HttpStatus.OK).body(bookService.updateBook(bookRequest, authorId));
     }
 
     @GetMapping("/get/{bookId}")
     public ResponseEntity<BookResponse> getBookById(@PathVariable(name = "bookId") Long bookId) {
-        return bookService.getBookById(bookId);
+        return ResponseEntity.status(HttpStatus.OK).body(bookService.getBookById(bookId));
     }
 
     @GetMapping("/getAll")
