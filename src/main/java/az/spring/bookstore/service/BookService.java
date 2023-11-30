@@ -43,7 +43,7 @@ public class BookService {
     private final AuthorService authorService;
     private final EmailService emailService;
 
-    public ResponseEntity<BookResponse> createBook(BookRequest bookRequest, Long authorId) {
+    public BookResponse createBook(BookRequest bookRequest, Long authorId) {
         log.info("Inside bookRequest {}", bookRequest);
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
@@ -54,13 +54,12 @@ public class BookService {
             book.setAuthor(author);
             emailService.sendEmailToStudents(students, BookStore.EMAIL_SUBJECT, BookStore.EMAIL_MESSAGE);
             log.info("Inside createBook {}", book);
-            return ResponseEntity.status(HttpStatus.CREATED)
-                    .body(bookMapper.fromModelToResponse(bookRepository.save(book)));
+            return bookMapper.fromModelToResponse(bookRepository.save(book));
         } else
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+            throw new AuthorNotFoundException(HttpStatus.UNAUTHORIZED.name(), ErrorMessage.UNAUTHORIZED);
     }
 
-    public ResponseEntity<BookResponse> updateBook(BookRequest bookRequest, Long authorId) {
+    public BookResponse updateBook(BookRequest bookRequest, Long authorId) {
         log.info("Inside bookRequest {}", bookRequest);
         Author author = authorRepository.findById(authorId).orElseThrow(
                 () -> new AuthorNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.AUTHOR_NOT_FOUND));
@@ -68,24 +67,22 @@ public class BookService {
             Book book = bookRepository.findById(bookRequest.getId()).orElseThrow(
                     () -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
             if (Objects.nonNull(book)) {
+                throw new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND);
+            } else {
                 Book updatedBook = bookMapper.fromRequestToModel(bookRequest);
                 updatedBook.setAuthor(author);
                 log.info("Inside updatedBook {}", updatedBook);
-                return ResponseEntity.status(HttpStatus.OK).body(bookMapper.fromModelToResponse(updatedBook));
-            } else
-                return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        } else
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+                return bookMapper.fromModelToResponse(updatedBook);
+            }
+        }
+        throw new AuthorNotFoundException(HttpStatus.UNAUTHORIZED.name(), ErrorMessage.UNAUTHORIZED);
     }
 
-    public ResponseEntity<BookResponse> getBookById(Long bookId) {
+    public BookResponse getBookById(Long bookId) {
         Book book = bookRepository.findById(bookId).orElseThrow(
                 () -> new BookNotFoundException(HttpStatus.NOT_FOUND.name(), ErrorMessage.BOOK_NOT_FOUND));
-        if (Objects.nonNull(book)) {
             log.info("Inside getBookById {}", book);
-            return ResponseEntity.status(HttpStatus.OK).body(bookMapper.fromModelToResponse(book));
-        }
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return bookMapper.fromModelToResponse(book);
     }
 
     public ResponseEntity<List<BookWrapper>> getAllBooksByStatus() {
